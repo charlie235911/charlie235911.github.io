@@ -96,10 +96,10 @@ body {
 }
 .loading {
     position: absolute;
-    top: 54%;
+    top: 51%;
     left: 50%;
     transform: translate(-50%, -28%);
-    font-size: 150%;
+    font-size: 250%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,7 +167,7 @@ body {
     top: 80%;
     left: 50%;
     transform: translate(-50%, -28%);
-    width: 150px;
+    width: 20vh;
     height: 25px;
     appearance: none;
     -webkit-appearance: none;
