@@ -11,12 +11,9 @@ body {
 }
 
 p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(885%, -2050%);
-    text-align: center;
-    font-size: 12px;
+    position: fixed;
+    top: 120px;
+    right: 17px;
 }
 
 #background {
@@ -58,31 +55,7 @@ p {
     transform-origin: top left;
 }
 
-#icon_ig {
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-#icon_fb {
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-#apple {
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-#google {
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-#qrcode {
+#icon_ig, #icon_fb, #apple, #google, #qrcode {
     float: right;
     margin-top: 10px;
     margin-right: 10px;
