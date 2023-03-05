@@ -27,7 +27,6 @@ const progressBar = document.getElementById("progress-bar");
 const progressValue = document.getElementById("progressValue");
 const gif = document.getElementById("link-start");
 let value = 0;
-let countdownNumber = 5;
 const timerId = setInterval(() => {
     const randomIncrement = Math.floor(Math.random() * 15);
     value += randomIncrement;
