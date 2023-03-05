@@ -33,9 +33,9 @@ const timerId = setInterval(() => {
     if (value > 100) value = 100;
     progressBar.value = value;
     progressValue.innerText = value + "%";
-    // if (value === 100) {
-    //     setTimeout(function() {
-    //         window.location.href = 'https://ani.gamer.com.tw/';
-    //     }, 2000);
-    // }
+    if (value === 100) {
+        setTimeout(function() {
+            window.location.href = 'https://ani.gamer.com.tw/';
+        }, 2000);
+    }
 }, 1000);
