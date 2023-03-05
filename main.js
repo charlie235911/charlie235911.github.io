@@ -27,6 +27,7 @@ const progressBar = document.getElementById("progress-bar");
 const progressValue = document.getElementById("progressValue");
 const link= document.getElementById("link-start");
 const load = document.getElementById("loading");
+const audio = new Audio('link start.mp3');
 let value = 0;
 const timerId = setInterval(() => {
     const randomIncrement = Math.floor(Math.random() * 15);
@@ -40,6 +41,7 @@ const timerId = setInterval(() => {
             progressValue.style.display = "none";
             load.style.display = "none";
             link.style.display = "block";
+            audio.play().then();
             setTimeout(function() {
                 window.location.href = 'https://ani.gamer.com.tw/';
             }, 4900);
