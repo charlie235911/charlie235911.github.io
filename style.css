@@ -228,7 +228,7 @@ p {
     left: 50%;
     transform: translate(-50%, 50%);
     width: 20vw;
-    height: 2.5vh;
+    height: 2.5vmin;
     appearance: none;
     -webkit-appearance: none;
 }
@@ -249,5 +249,5 @@ p {
     left: 50%;
     transform: translate(-50%, 57.5%);
     transform-origin: top left;
-    font-size: 2vh;
+    font-size: 2vmin;
 }
