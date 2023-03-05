@@ -29,7 +29,7 @@ const link= document.getElementById("link-start");
 const load = document.getElementById("loading");
 let value = 0;
 const timerId = setInterval(() => {
-    const randomIncrement = Math.floor(Math.random() * 15);
+    const randomIncrement = Math.floor(Math.random() * 10);
     value += randomIncrement;
     if (value > 100) value = 100;
     progressBar.value = value;
@@ -45,4 +45,4 @@ const timerId = setInterval(() => {
             }, 4900);
         }, 1000);
     }
-}, 2500);
+}, 3000);
