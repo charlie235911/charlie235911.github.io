@@ -42,7 +42,7 @@ const timerId = setInterval(() => {
             link.style.display = "block";
             setTimeout(function() {
                 window.location.href = 'https://ani.gamer.com.tw/';
-            }, 5000);
+            }, 4900);
         }, 1000);
     }
 }, 1000);
