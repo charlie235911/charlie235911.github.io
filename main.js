@@ -35,14 +35,16 @@ const timerId = setInterval(() => {
     progressBar.value = value;
     progressValue.innerText = value + "%";
     if (value === 100) {
-        progressBar.style.display = "none";
-        progressValue.style.display = "none";
-        video.style.display = "block";
-        video.play();
-        video.addEventListener("ended", function() {
-            setTimeout(function() {
-                window.location.href = 'https://ani.gamer.com.tw/';
+        setTimeout(function() {
+            progressBar.style.display = "none";
+            progressValue.style.display = "none";
+            video.style.display = "block";
+            video.play();
+            video.addEventListener("ended", function() {
+                setTimeout(function() {
+                    window.location.href = 'https://ani.gamer.com.tw/';
+                });
             });
-        });
+        }, 500);
     }
 }, 1000);
