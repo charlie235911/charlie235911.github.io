@@ -25,9 +25,9 @@ backButton.addEventListener("click", function() {
 
 const progressBar = document.getElementById("progress-bar");
 const progressValue = document.getElementById("progressValue");
-const video = document.getElementById("video");
+const link= document.getElementById("link-start");
+const load = document.getElementById("loading");
 let value = 0;
-let count = 0;
 const timerId = setInterval(() => {
     const randomIncrement = Math.floor(Math.random() * 15);
     value += randomIncrement;
@@ -38,13 +38,11 @@ const timerId = setInterval(() => {
         setTimeout(function() {
             progressBar.style.display = "none";
             progressValue.style.display = "none";
-            video.style.display = "block";
-            video.play();
-            video.addEventListener("ended", function() {
-                setTimeout(function() {
-                    window.location.href = 'https://ani.gamer.com.tw/';
-                });
-            });
-        }, 500);
+            load.style.display = "none";
+            link.style.display = "block";
+            setTimeout(function() {
+                window.location.href = 'https://ani.gamer.com.tw/';
+            }, 4900);
+        }, 1000);
     }
 }, 1000);
