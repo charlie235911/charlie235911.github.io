@@ -10,7 +10,7 @@ body {
     background: radial-gradient(circle at center, #04f3f3, rgb(0, 149, 255));
 }
 
-#download {
+p {
     position: fixed;
     font-size: 1.75vmin;
     top: 12.5vmin;
