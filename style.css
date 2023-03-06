@@ -10,7 +10,7 @@ body {
     background: radial-gradient(circle at center, #04f3f3, rgb(0, 149, 255));
 }
 
-p {
+#download {
     position: fixed;
     font-size: 1.75vmin;
     top: 12.5vmin;
@@ -153,7 +153,6 @@ p {
     height: 100%;
     text-align: center;
     width: 100%;
-    color: #fff;
     text-shadow: 0 0 5px #fff;
     animation: loading-animation 1.8s ease-in-out infinite alternate;
 }
@@ -261,4 +260,19 @@ p {
     transform: translate(-50%, -40%);
     z-index: 1;
     opacity: 1;
+}
+
+#volume {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size: 2.5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    color: #ff0000;
 }
