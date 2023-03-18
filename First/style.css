@@ -1,0 +1,263 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: radial-gradient(circle at center, #04f3f3, rgb(0, 149, 255));
+}
+
+#download {
+    position: fixed;
+    font-size: 1.75vmin;
+    top: 12.5vmin;
+    right: 1.25vmin;
+}
+
+#background {
+    height: 5vmin;
+    width: 100%;
+    background-color: white;
+}
+
+#text {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    font-size: 2vmin;
+    text-align: left;
+    white-space: pre-wrap;
+}
+
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40vmin;
+    height: auto;
+    transform: translate(-50%, -40%);
+    transform-origin: top left;
+}
+
+#anime {
+    position: absolute;
+    top: 0.5vmin;
+    left: 0.5vmin;
+    width: 8vmin;
+    height: auto;
+    transform-origin: top left;
+}
+
+#icon_ig, #icon_fb {
+    float: right;
+    width: 4vmin;
+    height: auto;
+    margin-top: 0.5vmin;
+    margin-right: 0.5vmin;
+}
+
+#apple {
+    float: right;
+    width: 12vmin;
+    height: auto;
+    margin-top: 1vmin;
+    margin-right: 0.5vmin;
+}
+
+#google {
+    float: right;
+    width: 11vmin;
+    height: auto;
+    margin-top: 1vmin;
+    margin-right: 0.5vmin;
+}
+
+#qrcode {
+    float: right;
+    width: 8vmin;
+    height: auto;
+    margin-top: 1vmin;
+    margin-right: 0.5vmin;
+}
+
+#reload-btn {
+    position: absolute;
+    background: linear-gradient(to bottom, #ff8a00, #da1b60);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    top: 95%;
+    left: 50%;
+    transform: translate(70%, -50%);
+}
+
+#reload-btn:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+#back-btn {
+    position: absolute;
+    background: linear-gradient(to bottom, #c711d3, #4612c9);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    top: 95%;
+    left: 50%;
+    transform: translate(-170%, -50%);
+}
+
+#back-btn:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+#report-btn {
+    position: absolute;
+    background: linear-gradient(to bottom, #04f3f3, #00ff80);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#report-btn:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -19%);
+    font-size: 5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 0 5px #fff;
+    animation: loading-animation 1.8s ease-in-out infinite alternate;
+}
+
+.loading span {
+    display: inline-block;
+    animation: jump 1.8s alternate infinite;
+}
+
+.loading span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loading span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.loading span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.loading span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.loading span:nth-child(6) {
+    animation-delay: 1.0s;
+}
+
+.loading span:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+.loading span:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+.loading span:nth-child(9) {
+    animation-delay: 1.6s;
+}
+
+.loading span:nth-child(10) {
+    animation-delay: 1.8s;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes loading-animation {
+    from {
+        color: #ff3c3c;
+    }
+
+    to {
+        color: #fa6254;
+    }
+}
+
+#progress-bar {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 20vw;
+    height: 2.5vmin;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+::-webkit-progress-value {
+    background-color: rgba(97, 255, 13, 0.92);
+    border-radius: 10px;
+}
+
+#progressValue {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 57.5%);
+    transform-origin: top left;
+    font-size: 2vmin;
+}
+
+#link-start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75vmin;
+    height: auto;
+    transform: translate(-50%, -40%);
+    z-index: 1;
+    opacity: 1;
+}
