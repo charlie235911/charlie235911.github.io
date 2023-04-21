@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>會員登入頁 - 巴哈姆特</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 <div class="Top">
@@ -20,7 +21,9 @@
         </div>
         <div id="password">
             <input type="password" spellcheck="false" class="form-control" name="password" placeholder="密碼" autocomplete="current-password" required maxlength="22">
-            <a href="#" onclick="loginPage.passwordChangeType(this);"><i class="material-icons">visibility</i></a>
+            <span onclick="passwordChangeType(this);">
+                <i id="eye" class="material-icons">visibility</i>
+            </span>
         </div>
         <div id="option">
             <ul class="check-box">
@@ -65,5 +68,6 @@
         " 巴 哈 姆 特 電 玩 資 訊 站 https://www.gamer.com.tw "
     </p>
 </div>
+<script src="main.js"></script>
 </body>
 </html>

@@ -16,6 +16,25 @@ a {
     text-decoration: none;
 }
 
-a:-webkit-any-link {
+a:-webkit-any-link, #eye {
     cursor: pointer;
+}
+
+.Login {
+    flex-wrap: wrap;
+}
+
+#head {
+    display: flex;
+    margin-bottom: 12px;
+    justify-content: center;
+}
+
+.Bottom {
+    margin: auto 0 0 0;
+    justify-content: center;
+    height: 80px;
+    border-top: 1px solid #999999;
+    text-align: center;
+    font-size: 12px;
 }
