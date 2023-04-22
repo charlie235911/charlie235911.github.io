@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>會員登入頁 - 巴哈姆特</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Teko:300,400">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -12,61 +13,74 @@
     <a href="https://www.gamer.com.tw/"><img src="top_logo.svg" style="height: 35px"></a>
 </div>
 <div class="Login">
-    <div id="head">
-        <img src="baha_logo_horizontal.svg">
-    </div>
-    <form id="login">
-        <div id="account">
-            <input type="text" class="form-control" name="userid" placeholder="帳號" autocomplete="username" required pattern="^[A-Za-z][A-Za-z0-9]{1,11}$" maxlength="12">
+    <div id="loginForm">
+        <div id="head">
+            <img src="baha_logo_horizontal.svg">
         </div>
-        <div id="password">
-            <input type="password" spellcheck="false" class="form-control" name="password" placeholder="密碼" autocomplete="current-password" required maxlength="22">
-            <span onclick="passwordChangeType(this);">
+        <form id="login">
+            <div id="account">
+                <input type="text" class="form-control" name="userid" placeholder="帳號" autocomplete="username" required pattern="^[A-Za-z][A-Za-z0-9]{1,11}$" maxlength="12">
+            </div>
+            <div id="password">
+                <input type="password" spellcheck="false" class="form-control" name="password" placeholder="密碼" autocomplete="current-password" required maxlength="22">
+                <span onclick="passwordChangeType(this);">
                 <i id="eye" class="material-icons">visibility</i>
             </span>
-        </div>
-        <div id="option">
-            <ul class="check-box">
-                <li>
-                    <div class="check-group"><input id="check-saveid" type="checkbox" checked=""><label for="check-saveid" class="is-active">
-                    <div class="label-icon"><i class="fa fa-check"></i></div>
-                    <h6>記住帳號</h6></label></div>
-                </li>
-                <li>
-                    <div class="check-group"><input id="check-autologin" type="checkbox" name="autoLogin" value="T" checked=""><label for="check-autologin" class="is-active">
-                    <div class="label-icon"><i class="fa fa-check"></i></div>
-                    <h6>保持登入狀態</h6></label></div>
-                </li>
-            </ul>
-            <a id="btn-switch-problem" class="caption-text" href="login_problem.php">登入有問題嗎？</a>
-        </div>
-        <div id="login-box">
-            <a id="btn-login-cancel" href="###" class="btn width-full" style="display:none;margin-right:2px;">取消</a>
-            <a id="btn-login" class="btn background__color-primary width-full" href="###">登入</a>
-        </div>
-    </form>
+            </div>
+            <div id="option">
+                <ul class="check-box">
+                    <li>
+                        <div class="check-group">
+                            <input id="check-saveId" type="checkbox">
+                            <label for="check-saveId">
+                                <div class="label-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <h6>記住帳號</h6>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="check-group">
+                            <input id="check-autologin" type="checkbox" name="autoLogin" value="T">
+                            <label for="check-autologin">
+                                <div class="label-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <h6>保持登入狀態</h6>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+                <a id="btn-switch-problem" class="caption-text" href="login_problem.php">登入有問題嗎？</a>
+            </div>
+            <div id="login-box">
+                <a id="btn-login">登入</a>
+            </div>
+        </form>
 
-    <div class="no-account">還沒有帳號嗎？
-        <a href="register.php?service_name=ani">我要註冊</a>
+        <div class="no-account">還沒有帳號嗎？
+            <a href="register.php?service_name=ani">我要註冊</a>
+        </div>
+        <div class="other-option">
+            <hr>
+            <div class="easy-way">使用其他帳號輕鬆登入</div>
+            <hr>
+        </div>
+        <div id="other-login">
+            <a href="https://accounts.google.com/o/oauth2/auth/identifier?response_type=code%20id_token&response_mode=form_post&state=login_15728&scope=openid%20email&nonce=990cccdccba4bbe8&redirect_uri=https%3A%2F%2Fuser.gamer.com.tw%2Foauth2redirect.php&client_id=949754894988-7ujs5nvsi6e0u97jm2kss6dokqbnoko0.apps.googleusercontent.com&service=lso&o2v=1&flowName=GeneralOAuthFlow"><img src="btn-icon_Google.svg"></a>
+            <a href="https://access.line.me/oauth2/v2.1/login?returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fresponse_type%3Dcode%26response_mode%3Dform_post%26state%3Dlogin_16444%26scope%3Dopenid%2Bemail%26nonce%3D73afda1b5e1ed2b8%26redirect_uri%3Dhttps%253A%252F%252Fuser.gamer.com.tw%252Foauth2redirect.php%253Fplatform%253Dline%26code_challenge%3DuidPvtYbntp75pXLxYYmLGOFcMb7SiNY3vNWj4PgZFA%26code_challenge_method%3DS256%26client_id%3D1656109921&loginChannelId=1656109921&loginState=RqdgR9af5MgUwNtJHaCSUM#/"><img src="share-icon_line.svg"></a>
+            <a href="https://login.live.com/oauth20_authorize.srf?client_id=defd7779-de92-4166-88e1-9600f8ac2c0f&scope=openid+email&redirect_uri=https%3a%2f%2fuser.gamer.com.tw%2foauth2redirect.php&response_type=code+id_token&state=login_15422&response_mode=form_post&nonce=b7c165cb922c7b4f&uaid=491830eeb3504fcd8c8cd7e1de03663a&msproxy=1&issuer=mso&tenant=consumers&ui_locales=zh-TW&epct=PAQABAAEAAAD--DLA3VO7QrddgJg7WevrmNEsNFUPIoXcjWdPUtkXDe1KEt68EVz_q_VSa1HMx7PyuZaFXwBKxZRuQ_5PZJAy_lrpjYDFu8S4yPqPHf5bgYDAckHlcgKn1vb0CzjKOZDPiyFielriLbQIqKr-QGy2yN95ji_RjM_QneS4j9Z9FyaV2-KumSkI4gmXaYpmFAhAk3TZ-K2ysyM3A8b3bxTBXmHQE3cogjpIV5DGpRn-1iAA&jshs=0#"><img src="btn-icon_Microsoft.svg"></a>
+            <a href="https://appleid.apple.com/auth/authorize?response_type=code+id_token&response_mode=form_post&state=login_11365&scope=openid+email&nonce=014fcdc5c6b26b11&redirect_uri=https%3A%2F%2Fuser.gamer.com.tw%2Foauth2redirect.php&client_id=tw.com.gamer.signInWithApple"><img src="btn-icon_Apple.svg"></a>
+        </div>
     </div>
-    <div class="other-option">
-        <hr>
-        <div class="easy-way">使用其他帳號輕鬆登入</div>
-        <hr>
+    <div id="bottom">
+        <p>
+            本站所刊載之圖文內容等版權皆屬原廠商或原作者所有，非經同意請勿轉載
+            <br>
+             巴 哈 姆 特 電 玩 資 訊 站 https://www.gamer.com.tw
+        </p>
     </div>
-    <div id="other-login">
-        <a href="https://accounts.google.com/o/oauth2/auth/identifier?response_type=code%20id_token&response_mode=form_post&state=login_15728&scope=openid%20email&nonce=990cccdccba4bbe8&redirect_uri=https%3A%2F%2Fuser.gamer.com.tw%2Foauth2redirect.php&client_id=949754894988-7ujs5nvsi6e0u97jm2kss6dokqbnoko0.apps.googleusercontent.com&service=lso&o2v=1&flowName=GeneralOAuthFlow"><img src="btn-icon_Google.svg"></a>
-        <a href="https://access.line.me/oauth2/v2.1/login?returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fresponse_type%3Dcode%26response_mode%3Dform_post%26state%3Dlogin_16444%26scope%3Dopenid%2Bemail%26nonce%3D73afda1b5e1ed2b8%26redirect_uri%3Dhttps%253A%252F%252Fuser.gamer.com.tw%252Foauth2redirect.php%253Fplatform%253Dline%26code_challenge%3DuidPvtYbntp75pXLxYYmLGOFcMb7SiNY3vNWj4PgZFA%26code_challenge_method%3DS256%26client_id%3D1656109921&loginChannelId=1656109921&loginState=RqdgR9af5MgUwNtJHaCSUM#/"><img src="share-icon_line.svg"></a>
-        <a href="https://login.live.com/oauth20_authorize.srf?client_id=defd7779-de92-4166-88e1-9600f8ac2c0f&scope=openid+email&redirect_uri=https%3a%2f%2fuser.gamer.com.tw%2foauth2redirect.php&response_type=code+id_token&state=login_15422&response_mode=form_post&nonce=b7c165cb922c7b4f&uaid=491830eeb3504fcd8c8cd7e1de03663a&msproxy=1&issuer=mso&tenant=consumers&ui_locales=zh-TW&epct=PAQABAAEAAAD--DLA3VO7QrddgJg7WevrmNEsNFUPIoXcjWdPUtkXDe1KEt68EVz_q_VSa1HMx7PyuZaFXwBKxZRuQ_5PZJAy_lrpjYDFu8S4yPqPHf5bgYDAckHlcgKn1vb0CzjKOZDPiyFielriLbQIqKr-QGy2yN95ji_RjM_QneS4j9Z9FyaV2-KumSkI4gmXaYpmFAhAk3TZ-K2ysyM3A8b3bxTBXmHQE3cogjpIV5DGpRn-1iAA&jshs=0#"><img src="btn-icon_Microsoft.svg"></a>
-        <a href="https://appleid.apple.com/auth/authorize?response_type=code+id_token&response_mode=form_post&state=login_11365&scope=openid+email&nonce=014fcdc5c6b26b11&redirect_uri=https%3A%2F%2Fuser.gamer.com.tw%2Foauth2redirect.php&client_id=tw.com.gamer.signInWithApple"><img src="btn-icon_Apple.svg"></a>
-    </div>
-</div>
-<div class="Bottom">
-    <p>
-        "本站所刊載之圖文內容等版權皆屬原廠商或原作者所有，非經同意請勿轉載"
-        <br>
-        " 巴 哈 姆 特 電 玩 資 訊 站 https://www.gamer.com.tw "
-    </p>
 </div>
 <script src="main.js"></script>
 </body>
