@@ -50,6 +50,10 @@ a:-webkit-any-link, #eye, h6, #Google, #Line, #Microsoft, #Apple{
     max-width: 190px;
 }
 
+h5 {
+    display: none;
+}
+
 .form-control {
     margin: 8px 0;
     border: 1px solid #D9D9D9;
@@ -235,4 +239,34 @@ hr {
 p {
     margin-top: 15px;
     color: #464646;
+}
+
+
+@media (max-width: 540px) {
+    body {
+        background: #FFF;
+    }
+
+    .Login {
+        height: calc(100vh - 35px);
+    }
+
+    #loginForm {
+        width: 100%;
+        margin: 20px auto auto auto;
+        box-shadow: none;
+    }
+
+    #head {
+        display: none;
+    }
+
+    h5 {
+        color: #464646;
+        display: flex;
+        margin-bottom: 16px;
+        font-size: 24px;
+        font-weight: bold;
+        justify-content: center;
+    }
 }
