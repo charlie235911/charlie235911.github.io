@@ -157,6 +157,7 @@ h6 {
 }
 
 #problem {
+    font-size: 13px;
     margin-left: auto;
 }
 
@@ -177,6 +178,7 @@ h6 {
 }
 
 .no-account {
+    font-size: 13px;
     color: rgba(76, 87, 102, 0.6);
     margin: 16px 0;
     justify-content: center;
@@ -195,6 +197,7 @@ hr {
 }
 
 .easy-way {
+    font-size: 13px;
     margin: 0 8px;
     color: rgba(76, 87, 102, 0.6);
 }
