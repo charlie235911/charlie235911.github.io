@@ -1,6 +1,7 @@
 body {
     background: #E5E5E5;
     line-height: 18px;
+    font-size: 15px;
     font-family: "Helvetica Neue", Helvetica, "Roboto", Arial, "Lucida Grande", "PingFang TC", "蘋果儷中黑", "Apple LiGothic Medium", sans-serif;
 }
 
@@ -25,14 +26,11 @@ a:-webkit-any-link, #eye, h6{
 
 .Login {
     display: flex;
-    width: 100vw;
     height: calc(100vh - 44px);
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 #loginForm {
-    min-height: 80px;
     width: 360px;
     margin: 8rem auto auto auto;
     padding: 36px 24px;
@@ -58,13 +56,16 @@ a:-webkit-any-link, #eye, h6{
     padding: 8px;
     box-sizing: border-box;
     width: 100%;
-    background-color: #FFF;
     font-size: 15px;
-    color: #2d2d2d;
 }
 
 .form-control {
     margin-top: 0;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #117e96;
 }
 
 #password {
@@ -109,17 +110,6 @@ li {
     padding: 5px 0px;
 }
 
-.check-group label {
-    margin-left: -5px;
-}
-
-.check-group input, label {
-    display: inline-block;
-    min-width: 18px;
-    min-height: 16px;
-    cursor: pointer;
-}
-
 .check-group input[type=checkbox] {
     display: none;
     vertical-align: middle;
@@ -151,8 +141,30 @@ li {
     box-shadow: none;
 }
 
+.fa {
+    margin-left: 0;
+    vertical-align: top;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+}
+
+.check-group input[type=checkbox] + label h6 {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 19px;
+    color: #464646;
+    white-space: nowrap;
+    margin: 0 0 0 3px;
+}
+
 h6 {
     font-weight: normal;
+}
+
+#problem {
+    color: #117E96;
+    margin-left: auto;
 }
 
 #btn-login {
@@ -191,7 +203,6 @@ hr {
 }
 
 .no-account {
-    font-size: 13px;
     color: rgba(76, 87, 102, 0.6);
     text-align: center;
     margin: 16px 0;
@@ -200,7 +211,6 @@ hr {
 
 .easy-way {
     margin: 0 8px;
-    font-size: 13px;
     color: rgba(76, 87, 102, 0.6);
 }
 
@@ -234,8 +244,6 @@ hr {
 }
 
 p {
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin-top: 15px;
+    color: #464646;
 }
