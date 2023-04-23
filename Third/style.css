@@ -5,7 +5,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, "Roboto", Arial, "Lucida Grande", "PingFang TC", "蘋果儷中黑", "Apple LiGothic Medium", sans-serif;
 }
 
-body, div, ul, form, input, h6, p{
+body, div, ul{
     margin: 0;
     padding: 0;
 }
@@ -37,6 +37,7 @@ a:-webkit-any-link, #eye, h6{
     background-color: #FFF;
     border-radius: 4px;
     box-sizing: border-box;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 #head {
@@ -68,6 +69,10 @@ a:-webkit-any-link, #eye, h6{
     border-color: #117e96;
 }
 
+::placeholder {
+    color: #B3B3B3;
+}
+
 #password {
     position: relative;
 }
@@ -82,8 +87,6 @@ a:-webkit-any-link, #eye, h6{
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
-    background: #FFF;
 }
 
 #password span i {
@@ -91,7 +94,7 @@ a:-webkit-any-link, #eye, h6{
     font-size: 18px;
 }
 
-#option, #login-box, .no-account, #bottom, #option{
+#option, #login-box, .no-account, #bottom{
     display: flex;
     width: 100%;
 }
@@ -112,12 +115,10 @@ li {
 
 .check-group input[type=checkbox] {
     display: none;
-    vertical-align: middle;
 }
 
 .check-group input[type=checkbox] + label .label-icon {
     display: inline-block;
-    position: relative;
     padding: 2px 0 0;
     border-radius: 2px;
     width: 18px;
@@ -130,7 +131,6 @@ li {
     color: transparent;
     cursor: pointer;
     transition: all 0.2s;
-    z-index: 2;
     vertical-align: text-top;
 }
 
@@ -142,28 +142,21 @@ li {
 }
 
 .fa {
-    margin-left: 0;
     vertical-align: top;
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
 }
 
 .check-group input[type=checkbox] + label h6 {
     display: inline-block;
     font-size: 13px;
-    line-height: 19px;
     color: #464646;
-    white-space: nowrap;
-    margin: 0 0 0 3px;
 }
 
 h6 {
     font-weight: normal;
+    margin: 0 0 0 -1px;
 }
 
 #problem {
-    color: #117E96;
     margin-left: auto;
 }
 
@@ -178,16 +171,15 @@ h6 {
     background-color: #117e96;
     color: #FFF;
     width: 100%;
-    padding: 5px 12px;
-    vertical-align: middle;
-    border: 1px solid transparent;
     font-size: 14px;
-    line-height: 1.5;
     letter-spacing: 1px;
     cursor: pointer;
-    box-shadow: none;
-    font-weight: normal;
-    text-shadow: none;
+}
+
+.no-account {
+    color: rgba(76, 87, 102, 0.6);
+    margin: 16px 0;
+    justify-content: center;
 }
 
 .other-option {
@@ -200,13 +192,6 @@ hr {
     border: none;
     background-color: #D9D9D0;
     flex: 1 1;
-}
-
-.no-account {
-    color: rgba(76, 87, 102, 0.6);
-    text-align: center;
-    margin: 16px 0;
-    justify-content: center;
 }
 
 .easy-way {
@@ -222,9 +207,10 @@ hr {
 
 #other-login a{
     display: flex;
-    width: 48px;
-    height: 48px;
-    margin-right: 16px;
+    width: 46px;
+    height: 46px;
+    margin-left: 8px;
+    margin-right: 8px;
     border: 1px solid #D9D9D0;
     border-radius: 99rem;
 }
