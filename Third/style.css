@@ -20,7 +20,7 @@ a {
     text-decoration: none;
 }
 
-a:-webkit-any-link, #eye, h6{
+a:-webkit-any-link, #eye, h6, #Google, #Line, #Microsoft, #Apple{
     cursor: pointer;
 }
 
