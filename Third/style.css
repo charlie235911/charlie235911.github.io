@@ -37,7 +37,7 @@ a:-webkit-any-link, #eye, h6{
     background-color: #FFF;
     border-radius: 4px;
     box-sizing: border-box;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 #head {
@@ -110,7 +110,7 @@ ul {
 
 li {
     margin: 0 12px 0 0;
-    padding: 5px 0px;
+    padding: 5px 0;
 }
 
 .check-group input[type=checkbox] {
