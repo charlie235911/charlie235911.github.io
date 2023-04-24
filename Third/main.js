@@ -9,3 +9,7 @@ function passwordChangeType(obj) {
         obj.getElementsByTagName("i")[0].textContent = "visibility";
     }
 }
+
+function show(){
+    alert("此登入方式暫且維修中，請嘗試其他登入方式。");
+}
