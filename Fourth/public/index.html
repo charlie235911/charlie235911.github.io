@@ -43,11 +43,9 @@
                 },
                 body: jsonString,
             });
-            const data = await response;
+            const data = await response.json();
             // 在這裡處理回應資料，例如顯示成功訊息或更新頁面內容
             console.log("成功", data);
-            // const log = document.getElementById('log');
-            // log.innerHTML = JSON.stringify(data);
         } catch (error) {
             // 在這裡處理錯誤，例如顯示錯誤訊息或者回滾操作
             console.log("錯誤", error);
