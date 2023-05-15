@@ -34,7 +34,7 @@
     }
     const jsonString = JSON.stringify(jsonData);
     console.log(jsonString);
-    const url = "http://localhost:3000"; // 資料傳送到的 URL
+    const url = "http://localhost:3000/api"; // 資料傳送到的 URL
     try {
       const response = await fetch(url, {
         method: 'POST',

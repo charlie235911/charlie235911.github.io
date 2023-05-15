@@ -20,9 +20,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', (req, res) => {
-    const {movie, quote, character}=req.body;
-    sql = "INSERT INTO quote (movie, quote, character) VALUES (?, ?, ?)";
-    db.run(sql, [movie, quote, character], (err) => {
+    const {日期, 商品名稱, 最高價, 最低價}=req.body;
+    sql = "INSERT INTO quote (日期, 商品名稱, 最高價, 最低價) VALUES (?, ?, ?, ?)";
+    db.run(sql, [日期, 商品名稱, 最高價, 最低價], (err) => {
         if (err) {
             console.error(err.message);
             return res.status(500).send(err.message);
