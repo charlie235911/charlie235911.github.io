@@ -20,9 +20,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', (req, res) => {
-    const {date, product_name, product_weight, price}=req.body;
-    sql = "INSERT INTO quote (date, product_name, product_weight, price) VALUES (?, ?, ?, ?)";
-    db.run(sql, [date, product_name, product_weight, price], (err) => {
+    const {date, product_name, weight, price}=req.body;
+    sql = "INSERT INTO quote (date, product_name, weight, price) VALUES (?, ?, ?, ?)";
+    db.run(sql, [date, product_name, weight, price], (err) => {
         if (err) {
             console.error(err.message);
             return res.status(500).send(err.message);

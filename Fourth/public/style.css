@@ -1,0 +1,79 @@
+/* 標題樣式 */
+#title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 表單樣式 */
+#salt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#salt label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#salt input[type="text"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#salt button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#salt button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* 應用程式區域樣式 */
+#app {
+    text-align: center;
+}
+
+#app button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#app button:hover {
+    background-color: #45a049;
+}
+
+#app table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#app th, #app td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#app th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#app tr:hover {
+    background-color: #f5f5f5;
+}
