@@ -1,12 +1,4 @@
 <template>
-  <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Teko:300,400">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <div class="Top">
-    <a href="https://www.gamer.com.tw/"><img src="top_logo.svg" style="height: 35px"></a>
-  </div>
   <div class="Login">
     <div id="loginForm">
       <div id="head">
@@ -70,13 +62,6 @@
         <a @click="show" id="Apple"><img src="btn-icon_Apple.svg"></a>
       </div>
     </div>
-    <div id="bottom">
-      <p>
-        本站所刊載之圖文內容等版權皆屬原廠商或原作者所有，非經同意請勿轉載
-        <br>
-        巴 哈 姆 特 電 玩 資 訊 站 https://www.gamer.com.tw
-      </p>
-    </div>
   </div>
 </template>
 
@@ -112,11 +97,6 @@ body {
 body, div, ul{
   margin: 0;
   padding: 0;
-}
-
-.Top {
-  background: linear-gradient(135deg, #13aeab 0%, #117e96 75%);
-  height: 35px;
 }
 
 a {
@@ -331,15 +311,6 @@ hr {
   margin: auto;
 }
 
-#bottom {
-  margin: auto 0 0 0;
-  justify-content: center;
-  height: 80px;
-  border-top: 1px solid #999999;
-  text-align: center;
-  font-size: 12px;
-}
-
 p {
   margin-top: 15px;
   color: #464646;
@@ -371,10 +342,6 @@ p {
     font-size: 24px;
     font-weight: bold;
     justify-content: center;
-  }
-
-  #bottom {
-    padding: 0 16px 12px 16px;
   }
 }
 </style>

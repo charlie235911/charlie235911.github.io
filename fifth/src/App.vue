@@ -1,9 +1,13 @@
 <script setup>
-import phishing from './components/PhishingSite.vue'
+import phishingTop from './components/PhishingSiteTop.vue'
+import phishingBody from './components/PhishingSiteBody.vue'
+import phishingBottom from './components/PhishingSiteBottom.vue'
 </script>
 
 <template>
-  <phishing />
+  <phishingTop />
+  <phishingBody />
+  <phishingBottom />
 </template>
 
 <script>
