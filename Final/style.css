@@ -121,3 +121,62 @@ button {
 button:hover {
     background-color: #154466;
 }
+
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+
+    #header {
+        position: static;
+        height: auto;
+    }
+
+    #anime {
+        position: static;
+        width: 10vh;
+    }
+
+    #social-icons {
+        position: static;
+        top: initial;
+        right: initial;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    #content {
+        margin-top: 10px;
+    }
+
+    #loading-container {
+        margin-top: 10px;
+    }
+
+    #text {
+        font-size: 3.5vh;
+    }
+
+    #progress-bar {
+        height: 8px;
+        margin-top: 8px;
+    }
+
+    #progressValue {
+        margin-top: 4px;
+    }
+
+    #buttons-container {
+        margin-top: 10px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
