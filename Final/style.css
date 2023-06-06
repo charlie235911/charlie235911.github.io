@@ -1,0 +1,123 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: radial-gradient(circle at center, #13aeab 40%, #117e96 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    height: 7vh;
+    width: 100%;
+    background-color: white;
+}
+
+#anime {
+    position: absolute;
+    width: 14vh;
+    height: auto;
+}
+
+#social-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+}
+
+.icon {
+    margin-left: 10px;
+}
+
+#container {
+    width: auto;
+    height: auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#loading-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#text{
+    font-size: 3vh;
+}
+
+#text_loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#text_loading span {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#progress-bar {
+    width: 100%;
+    height: 10px;
+    margin-top: 10px;
+}
+
+#progressValue {
+    margin-top: 5px;
+}
+
+#link-start {
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #117e96;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #154466;
+}
