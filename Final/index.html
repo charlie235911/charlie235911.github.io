@@ -30,7 +30,9 @@
     <div id="content">
         <div id="text">此網頁當機中，請稍作等候。</div>
         <div id="loading-container">
-            <img id="loading" src="TVA5r.webm" alt="Loading...">
+            <video id="loading" autoplay loop muted>
+                <source src="TVA5r.webm" type="video/webm">
+            </video>
             <div id="text_loading">
                 <span>L</span>
                 <span>o</span>
@@ -45,7 +47,9 @@
             </div>
             <progress id="progress-bar" value="0" max="100"></progress>
             <span id="progressValue">0%</span>
-            <img id="link-start" src="link start.webm" style="display: none;" autoplay="false" loop="false">
+            <video id="link-start" autoplay loop muted style="display: none;">
+                <source src="link start.webm" type="video/webm">
+            </video>
         </div>
         <div id="buttons-container">
             <button id="back-btn">返回上頁</button>
