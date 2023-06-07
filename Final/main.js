@@ -32,17 +32,14 @@ const timerId = setInterval(() => {
     }
 }, 2000);
 
-// 重新載入頁面
 reloadButton.addEventListener('click', function () {
     location.reload();
 });
 
-// 返回上一頁
 backButton.addEventListener('click', function () {
     history.back();
 });
 
-// 問題回報
 reportButton.addEventListener('click', function () {
     window.open('https://docs.google.com/forms/d/e/1FAIpQLSf2pEm3Gxh_aXhDIVx-zMmBUM0DVrO7UZ3ZPXqdwvxlHlD9bA/viewform');
 });
