@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資料填寫表單</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 20px 0 10px -10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #signature-container {
+            display: none;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        canvas {
+            border: 2px solid #4CAF50;
+            touch-action: none;
+            background-color: #f9f9f9;
+        }
+
+        #signed-message {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>資料填寫表單</h1>
+</header>
+
+<div>
+    <form id="userForm" action="database.php" method="POST" enctype="multipart/form-data">
+        <div class="form-section">
+            <label for="name">姓名：</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+
+        <div class="form-section">
+            <label for="id_number">身分證字號：</label>
+            <input type="text" name="id_number" id="id_number" required>
+        </div>
+
+        <div class="form-section">
+            <label>電子簽章：</label><br>
+            <button type="button" onclick="showSignaturePad()">開始簽署</button>
+            <span id="signed-message">已完成簽署</span>
+        </div>
+
+        <div id="signature-container">
+            <p>請在下方簽名：</p>
+            <canvas id="signature-pad" width="400" height="200"></canvas><br>
+            <button type="button" onclick="clearSignature()">清除簽名</button>
+            <button type="button" onclick="saveSignature()">確認簽署</button>
+        </div>
+        <input type="hidden" id="signature-data" name="signature">
+
+        <div class="form-section">
+            <h3>請下載知情同意書</h3>
+            <a href="知情同意書_20250206.docx" download>📄 知情同意書 (Word)</a><br>
+        </div>
+
+        <div class="form-section">
+            <label for="signed_agreement">上傳簽署後的同意書：</label>
+            <input type="file" name="signed_agreement" accept=".doc,.docx" required>
+        </div>
+
+        <button type="submit">提交</button>
+    </form>
+</div>
+
+<script>
+    let isDrawing = false;
+    let ctx, canvas;
+
+    function showSignaturePad() {
+        document.getElementById("signature-container").style.display = "block"; // 顯示簽名板
+        canvas = document.getElementById("signature-pad");
+        ctx = canvas.getContext("2d");
+
+        // 滑鼠事件
+        canvas.addEventListener("mousedown", startDrawing);
+        canvas.addEventListener("mousemove", draw);
+        canvas.addEventListener("mouseup", stopDrawing);
+        canvas.addEventListener("mouseleave", stopDrawing);
+
+        // 觸控事件
+        canvas.addEventListener("touchstart", startDrawing);
+        canvas.addEventListener("touchmove", draw);
+        canvas.addEventListener("touchend", stopDrawing);
+    }
+
+    function startDrawing(event) {
+        isDrawing = true;
+        ctx.beginPath();
+        ctx.moveTo(getX(event), getY(event));
+    }
+
+    function stopDrawing() {
+        isDrawing = false;
+        ctx.beginPath();
+    }
+
+    function draw(event) {
+        if (!isDrawing) return;
+        ctx.lineWidth = 2;
+        ctx.lineCap = "round";
+        ctx.strokeStyle = "black";
+        ctx.lineTo(getX(event), getY(event));
+        ctx.stroke();
+    }
+
+    function getX(event) {
+        return event.clientX ? event.clientX - canvas.offsetLeft : event.touches[0].clientX - canvas.offsetLeft;
+    }
+
+    function getY(event) {
+        return event.clientY ? event.clientY - canvas.offsetTop : event.touches[0].clientY - canvas.offsetTop;
+    }
+
+    function clearSignature() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        document.getElementById("signature-data").value = "";
+    }
+
+    function saveSignature() {
+        let signatureData = canvas.toDataURL("image/png"); // 轉為 Base64
+        document.getElementById("signature-data").value = signatureData;
+        document.getElementById("signature-container").style.display = "none"; // 隱藏簽名板
+        document.getElementById("signed-message").style.display = "inline"; // 顯示已完成簽署文字
+        alert("簽名已儲存！");
+    }
+</script>
+
+</body>
+</html>
